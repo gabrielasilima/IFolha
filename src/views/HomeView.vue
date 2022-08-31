@@ -1,18 +1,15 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+  <v-container fluid fill-height class="bg-image flex-column flex-sm-row">
+    <v-row>
+      oiasdfadsfasdfasdfasdfadsfadsfasd
+    </v-row>
+  </v-container>
 </template>
 
-<script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
-
-export default {
-  name: 'HomeView',
-  components: {
-    HelloWorld
-  }
+<style scoped>
+.bg-image {
+  background-image: url("../assets/bg-main.jpg");
+  background-position: center;
+  background-size: cover;
 }
-</script>
+</style>
