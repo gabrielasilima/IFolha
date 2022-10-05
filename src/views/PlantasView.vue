@@ -1,41 +1,40 @@
 <template>
   <div>
-  <v-toolbar color = A5BE7F>
-    <v-toolbar-title> IFolha</v-toolbar-title>
-    <v-autocomplete v-model="select" :loading="loading" :items="items" :search-input.sync="search" cache-items
-      class="mx-4" flat hide-no-data hide-details label="Pesquisar" solo-inverted ></v-autocomplete>
-    <v-btn icon>
-      <v-icon>mdi-dots-vertical</v-icon>
-    </v-btn>
-  </v-toolbar>
-  <v-container fill-height class="bg-image flex-column flex-sm-row">
-    <v-row>
-      <v-col v-for="(planta, i) in plantas" :key="i" cols="12" sm="6" md="4"  lg="3">
-        <v-card class="pa-2" outlined tile>
-          <v-img class="white--text align-end" height="200px" :src="planta.imagem">
-            <v-card-title>{{planta.nome}}</v-card-title>
-          </v-img>
+    <v-container fill-height class="">
+      <v-row>
+        <v-col>
           
-          <v-card-subtitle class="pb-0">
-            {{planta.nomeCientifico}}
-          </v-card-subtitle>
-          
-          <v-card-text class="text--primary">
-            <div>Plantada em: </div>
-          
-            <div>{{planta.dataPlantio}}</div>
-          </v-card-text>
-          
-          <v-card-actions>
-            <v-btn color="orange" text>
-              Ver Detalhes
-            </v-btn>
-          </v-card-actions>
-          </v-card>
-      </v-col>
-      
-    </v-row>
-  </v-container>
+          <v-autocomplete v-model="select" :loading="loading" :items="items" :search-input.sync="search" cache-items
+        class="mx-4" flat hide-no-data hide-details label="Pesquisar" solo-inverted ></v-autocomplete>
+        </v-col>
+      </v-row>
+      <v-row>
+        <v-col v-for="(planta, i) in plantas" :key="i" cols="12" sm="6" md="4"  lg="3">
+          <v-card class="pa-2" outlined tile>
+            <v-img class="white--text align-end" height="200px" :src="planta.imagem">
+              <v-card-title>{{planta.nome}}</v-card-title>
+            </v-img>
+            
+            <v-card-subtitle class="pb-0">
+              {{planta.nomeCientifico}}
+            </v-card-subtitle>
+            
+            <v-card-text class="text--primary">
+              <div>Plantada em: </div>
+            
+              <div>{{planta.dataPlantio}}</div>
+            </v-card-text>
+            
+            <v-card-actions>
+              <v-btn color="light-green darken-4" text>
+                Ver Detalhes
+              </v-btn>
+            </v-card-actions>
+            </v-card>
+        </v-col>
+        
+      </v-row>
+    </v-container>
   </div>
 </template>
 
@@ -51,7 +50,6 @@
 -->
 
 <script>
-  import { mdiAccount } from "@mdi/js";
 export default {
   data() {
     return {
