@@ -8,19 +8,9 @@
         <router-view></router-view>
       </div>
     </v-main>
-    <div class="inferior" max-width="300px">
-      <div>
+    <div class="inferior">
+        <v-img class="imagem-ifpr" max-width="550px" :src="require('@/assets/calendar-month.png')" />
       </div>
-    </div>
-
-    <!--<v-footer>
-      <v-card tile width="15%" class="light-green lighten-2 text-center">
-        <v-card-text class="black--text">
-          {{ new Date().getFullYear() }} — <strong>IFolha</strong>
-        </v-card-text>
-      </v-card>
-    </v-footer>
-    -->
   </v-app>
 </template>
 
@@ -43,10 +33,7 @@
 
 .inferior {
   background-color: #b2c195;
-  border-radius: 20px 20px 0px 0px !important;
-  -webkit-border-bottom-right-radius: 50px;
-  -moz-border-radius-bottom-right: 50px;
-  border-bottom-right-radius: 50px;
+  border-radius: 50px 50px 0px 0px !important;
 }
 
 .fundo {

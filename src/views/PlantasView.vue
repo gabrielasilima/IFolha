@@ -3,7 +3,6 @@
     <v-container fill-height class="">
       <v-row>
         <v-col>
-          
           <v-autocomplete v-model="select" :loading="loading" :items="items" :search-input.sync="search" cache-items
         class="mx-4" flat hide-no-data hide-details label="Pesquisar" solo-inverted ></v-autocomplete>
         </v-col>
@@ -60,27 +59,33 @@ export default {
       plantas: [
         {
           nome: "Ipê",
-          nomeCientifico: "Ipe Brasiliensis",
+          nomeCientifico: "Handroanthus albus",
+          dataPlantio: "23/09/1991",
+          imagem: "https://http2.mlstatic.com/D_NQ_NP_919225-MLB25414550800_032017-W.jpg"
+        },
+        {
+          nome: "Cerejeira",
+          nomeCientifico: "Prunus subg. Cerasus",
           dataPlantio: "23/09/1991",
           imagem: "https://http2.mlstatic.com/D_NQ_NP_912828-MLB28347358604_102018-O.jpg"
         },
         {
-          nome: "Cerejeira",
-          nomeCientifico: "Cerejeira Brasiliensis",
-          dataPlantio: "23/09/1991",
-          imagem: ""
-        },
-        {
           nome: "Aracauria",
-          nomeCientifico: "Aracauria Brasiliensis",
+          nomeCientifico: "Araucaria angustifolia",
           dataPlantio: "23/09/1991",
-          imagem: ""
+          imagem: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZ7qSqSGuf5gZzh67ZR5Q9b_qOiJwmRUXUCQ&usqp=CAU"
         },
         {
           nome: "Jabuticaba",
-          nomeCientifico: "Jabuticaba Brasiliensis",
+          nomeCientifico: "Plinia cauliflora",
           dataPlantio: "23/09/1991",
-          imagem: ""
+          imagem: "https://http2.mlstatic.com/D_NQ_NP_743851-MLB49425248905_032022-O.webp"
+        },
+        {
+          nome: "Pitanga",
+          nomeCientifico: "Eugenia uniflora",
+          dataPlantio: "23/09/1991",
+          imagem: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWP1gIS0S5sDjTwHU2Vf1u9YnRMRltTdcz0A&usqp=CAU"
         }
       ],
     }
