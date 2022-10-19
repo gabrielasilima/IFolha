@@ -8,9 +8,32 @@
         <router-view></router-view>
       </div>
     </v-main>
-    <div class="inferior">
-        <v-img class="imagem-ifpr" max-width="550px" :src="require('@/assets/calendar-month.png')" />
+    <div class="inferior" max-width="300px">
+      <div>
       </div>
+    </div>
+
+    <v-footer class="rodape musgo">
+      <v-card flat width="100%" class="text-center flex musgo">
+        <v-card-text>
+          <v-btn class="ma-3" icon>
+            <v-icon dark>
+              mdi-flower vase
+            </v-icon>
+          </v-btn>
+          <v-btn class="ma-3" icon>
+            <v-icon dark>
+              mdi-calendar
+            </v-icon>
+          </v-btn>
+          <v-btn class="ma-3" icon>
+            <v-icon dark>
+              mdi-heart
+            </v-icon>
+          </v-btn>
+        </v-card-text>
+      </v-card>
+    </v-footer>
   </v-app>
 </template>
 
@@ -33,7 +56,18 @@
 
 .inferior {
   background-color: #b2c195;
-  border-radius: 50px 50px 0px 0px !important;
+  border-radius: 20px 20px 0px 0px !important;
+  -webkit-border-bottom-right-radius: 50px;
+  -moz-border-radius-bottom-right: 50px;
+  border-bottom-right-radius: 50px;
+}
+
+.rodape {
+  border-radius: 20px 20px 0px 0px !important;
+}
+
+.musgo{
+  background-color: #b2c195 !important;
 }
 
 .fundo {
