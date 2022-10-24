@@ -3,6 +3,10 @@ import VueRouter from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import PlantasView from '../views/PlantasView.vue'
 import InformationView from '../views/InformationView'
+import CalendarView from '../views/CalendarView'
+import FavoriteView from '../views/FavoriteView'
+import EnvironmentView from '../views/EnvironmentView.vue'
+import HomeView2 from '../views/HomeView2.vue'
 
 Vue.use(VueRouter)
 
@@ -27,9 +31,30 @@ const routes = [
   }
   ,
   {
-    path: '/information',
+    path: '/information/:codigo',
     name: 'information',
     component: InformationView
+  },
+  {
+    path: '/calendar',
+    name: 'calendar',
+    component: CalendarView
+  }
+  ,
+  {
+    path: '/favorite',
+    name: 'favorite',
+    component: FavoriteView
+  },
+  {
+    path: '/environment',
+    name: '/environment',
+    component: EnvironmentView
+  },
+  {
+    path: '/login',
+    name: '/home2',
+    component: HomeView2
   }
 ]
 

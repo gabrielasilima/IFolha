@@ -12,21 +12,21 @@
       <div>
       </div>
     </div>
-
+    
     <v-footer class="rodape musgo">
       <v-card flat width="100%" class="text-center flex musgo">
         <v-card-text>
-          <v-btn class="ma-3" icon>
+          <v-btn class="ma-3" icon to="/plantas">
             <v-icon dark>
               mdi-flower vase
             </v-icon>
           </v-btn>
-          <v-btn class="ma-3" icon>
+          <v-btn class="ma-3" icon to="/calendar">
             <v-icon dark>
               mdi-calendar
             </v-icon>
           </v-btn>
-          <v-btn class="ma-3" icon>
+          <v-btn class="ma-3" icon to="/favorite">
             <v-icon dark>
               mdi-heart
             </v-icon>
@@ -76,6 +76,7 @@
 
 .conteudo {
   padding: 20px 0px !important;
+  height: 100%;
   background-color: #f3e7d5;
   -webkit-border-top-left-radius: 50px;
   -moz-border-radius-top-left: 50px;
