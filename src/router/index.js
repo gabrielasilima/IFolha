@@ -6,7 +6,6 @@ import InformationView from '../views/InformationView'
 import CalendarView from '../views/CalendarView'
 import FavoriteView from '../views/FavoriteView'
 import EnvironmentView from '../views/EnvironmentView.vue'
-import HomeView2 from '../views/HomeView2.vue'
 
 Vue.use(VueRouter)
 
@@ -50,11 +49,6 @@ const routes = [
     path: '/environment',
     name: '/environment',
     component: EnvironmentView
-  },
-  {
-    path: '/login',
-    name: '/home2',
-    component: HomeView2
   }
 ]
 

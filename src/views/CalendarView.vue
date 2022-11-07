@@ -74,11 +74,3 @@ h3 {
     text-align: center;
 }
 </style>
-
-<!-- 
-<v-col cols="12" sm="6">
-    <v-card>
-        <v-calendar ref="calendar" color="primary" class="mx-auto card">
-        </v-calendar>
-    </v-card>
-</v-col> -->

@@ -10,8 +10,8 @@
       <v-row>
         <v-col v-for="(planta, i) in plantas" :key="i" cols="12" sm="6" md="4" lg="3">
           <v-card class="pa-2" outlined tile>
-            <v-img class="white--text align-end" height="200px" :src="planta.imagem">
-              <v-card-title>{{planta.nome}}</v-card-title>
+            <v-img class="white--text align-end" height="200px" :src="require(`@/${planta.midia.link}`)">
+              <v-card-title>{{planta.nomePopular}}</v-card-title>
             </v-img>
 
             <v-card-subtitle class="pb-0">
@@ -60,7 +60,7 @@ export default {
       // Simulated ajax query
       setTimeout(() => {
         this.items = this.plantas.filter(e => {
-          return (e.nome || '').toLowerCase().indexOf((v || '').toLowerCase()) > -1
+          return (e.nomePopular || '').toLowerCase().indexOf((v || '').toLowerCase()) > -1
         })
         this.loading = false
       }, 500)
