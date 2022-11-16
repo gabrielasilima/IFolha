@@ -7,7 +7,7 @@
         </v-row>
         <v-row>
         <v-col v-for="(planta, i) in plantas" :key="i" cols="12" sm="6" md="4" lg="3">
-          <v-card class="pa-2 light-green lighten-2" outlined tile>
+          <v-card class="pa-2 light-green lighten-5" outlined tile>
             <v-img class="white--text align-end" height="200px" :src="planta.imagem">
             </v-img>
 
@@ -87,8 +87,6 @@ export default {
   
 <style scoped>
 h3 {
-    border-radius: 14px 14px 14px 14px !important;
-    background-color: #AED581;
     color: #33691E;
     text-align: center;
     padding: 5px;

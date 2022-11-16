@@ -3,12 +3,13 @@
     <v-container fill-height>
       <v-row>
         <v-col>
-          <v-autocomplete v-model="select" :loading="loading" :items="items" :search-input.sync="search" cache-items
-            class="mx-4" flat hide-no-data hide-details label="Pesquisar" solo></v-autocomplete>
+          <v-autocomplete v-model="select" :loading="loading" :items="items"
+          item-text="nomePopular" :search-input.sync="search" cache-items
+            class="mx-4" flat hide-no-data hide-details label="Pesquisar" return-object></v-autocomplete>
         </v-col>
       </v-row>
       <v-row>
-        <v-col v-for="(planta, i) in plantas" :key="i" cols="12" sm="6" md="4" lg="3">
+        <v-col v-for="(planta, i) in plantasFiltradas" :key="i" cols="12" sm="6" md="4" lg="3">
           <v-card class="pa-2" outlined tile>
             <v-img class="white--text align-end" height="200px" :src="require(`@/${planta.midia.link}`)">
               <v-card-title>{{planta.nomePopular}}</v-card-title>
@@ -43,10 +44,19 @@ export default {
   data() {
     return {
       loading: false,
-      items: [],
+      plantasFiltradas: [],
       search: null,
       select: null,
       plantas: []
+    }
+  },
+  computed:{
+    items(){
+      return this.plantas.map(planta => {
+          const nomeCompleto = planta.nomePopular + " - " + planta.nomeCientifico
+
+          return Object.assign({}, planta, { nomeCompleto })
+        })
     }
   },
   watch: {
@@ -59,7 +69,7 @@ export default {
       this.loading = true
       // Simulated ajax query
       setTimeout(() => {
-        this.items = this.plantas.filter(e => {
+        this.plantasFiltradas = this.plantas.filter(e => {
           return (e.nomePopular || '').toLowerCase().indexOf((v || '').toLowerCase()) > -1
         })
         this.loading = false
@@ -68,6 +78,7 @@ export default {
   },
   async  mounted(){
     this.plantas = await DadosPlantas.getPlantas();
+    this.plantasFiltradas = this.plantas
   }
 }
 </script>

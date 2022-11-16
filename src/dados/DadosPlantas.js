@@ -123,7 +123,6 @@ const dadosPlantas = [
       dataCria: ""
     }
   },
-  ,
   {
     codigo: "5",
     nomePopular: "Jabuticaba ",
@@ -188,7 +187,7 @@ const dadosPlantas = [
   },
   {
     codigo: "7",
-    nomePopular: "Planta-cabeça-de-flecha",
+    nomePopular: "Cabeça-de-flecha",
     nomeCientifico: "Syngonium",
     dataPlantio: "23/09/1991",
     apelido: "Planta-cabeça-de-flecha",
