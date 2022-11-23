@@ -31,6 +31,11 @@
               mdi-heart
             </v-icon>
           </v-btn>
+          <v-btn class="ma-3" icon to="/environment">
+            <v-icon dark>
+              mdi-newspaper
+            </v-icon>
+          </v-btn>
         </v-card-text>
       </v-card>
     </v-footer>

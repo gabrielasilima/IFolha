@@ -18,7 +18,7 @@
             <v-col cols="12" sm="12" md="6" v-else>
                 <h3>Eventos - Campus Paranavaí</h3>
 
-                <h4 class="pl-5">Nenhum evento encontrado no dia selecionado!!</h4>
+                <h4 class="pl-5">Nenhum evento encontrado no dia selecionado!</h4>
             </v-col>
         </v-row>
     </v-container>
